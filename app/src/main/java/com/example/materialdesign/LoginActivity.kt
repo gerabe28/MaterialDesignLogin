@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
+
         btnIngresar.setOnClickListener {
 
 
@@ -46,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
 
                             //viaje ida de objeto USER
                             intent.putExtra("correo",user)
-                             startActivity(intent)
+                            startActivity(intent)
 
 
                         }else{
@@ -58,8 +59,14 @@ class LoginActivity : AppCompatActivity() {
 
 
         }
+    }
 
-
-
+    override fun onBackPressed()
+    {
+        super.onBackPressed()
+        val returnIntent = Intent(this, MainActivity::class.java)
+        startActivity(returnIntent)
+        finish()
+        System.exit(0)
     }
 }
