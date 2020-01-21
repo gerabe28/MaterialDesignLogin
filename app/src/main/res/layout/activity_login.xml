@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tryinh">
+    tools:context=".LoginActivity">
 
 
     <com.google.android.material.button.MaterialButton
@@ -101,7 +101,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/fbicon" />
+        app:srcCompat="@drawable/ic_fbicon" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -112,7 +112,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/igicon" />
+        app:srcCompat="@drawable/ic_igicon" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -125,7 +125,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.58"
-        app:srcCompat="@drawable/twicon" />
+        app:srcCompat="@drawable/ic_twicon" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -137,7 +137,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.508"
-        app:srcCompat="@drawable/gmailicon" />
+        app:srcCompat="@drawable/ic_gmailicon" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -151,6 +151,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.333"
-        app:srcCompat="@drawable/icono" />
+        app:srcCompat="@drawable/ic_icono" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

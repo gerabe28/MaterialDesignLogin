@@ -8,14 +8,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.tasks.Task
-import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_registro.*
-import kotlinx.android.synthetic.main.activity_tryinh.view.*
 
 class Registro : AppCompatActivity() {
 
@@ -81,7 +78,7 @@ class Registro : AppCompatActivity() {
 
         val ref = FirebaseDatabase.getInstance().getReference("Users")
         val userId = ref.push().key
-        val user = User(userId, name, apellido, email, contraseña, confcontra)
+        val user = UserClass(userId, name, apellido, email, contraseña, confcontra)
 
 
         auth = FirebaseAuth.getInstance()
@@ -105,7 +102,7 @@ class Registro : AppCompatActivity() {
         builder.setTitle("¡Bienvenido!")
         builder.setMessage("Usted está registrado.")
         builder.setPositiveButton("Aceptar",{ dialogInterface: DialogInterface, i: Int ->
-            val intent = Intent(this,Home::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
         })
         builder.show()

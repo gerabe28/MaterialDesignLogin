@@ -4,7 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import kotlinx.android.synthetic.main.activity_main.*
+import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,11 +13,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val SPLASH_TIME_OUT = 2000L
-        val homeIntent = Intent(this@MainActivity, Tryinh::class.java)
         Handler().postDelayed({
-            //Do some stuff here, like implement deep linking
-            startActivity(homeIntent)
-            finish()
+
+            val user = FirebaseAuth.getInstance().currentUser
+
+            if (user != null){
+                user?.let {
+                    val nombre = user.displayName
+                    val email = user.email
+                    val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                    intent.putExtra("correo",email)
+                    intent.putExtra("nombre",nombre)
+                    startActivity(intent)
+                }
+
+            Log.d("tag","SESION ACTIVA")
+
+            }else{
+
+                val homeIntent = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(homeIntent)
+                finish()
+           }
+
         }, SPLASH_TIME_OUT.toLong())
     }
 }

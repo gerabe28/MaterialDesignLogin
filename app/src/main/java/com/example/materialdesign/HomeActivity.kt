@@ -6,26 +6,30 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
+import com.google.firebase.auth.EmailAuthProvider
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.nav_header.*
 
-class Home : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         toolbar("App")
 
+       
+        
+
         //recepcion de objeto USER
-        intent.extras.getString("correo")
-
+      intent.extras.getString("correo")
        // intent.getShortExtra("correo","user")
-
         val intent = getIntent();
         val emailReceived = intent.getStringExtra("correo")
 
         Log.d("tag","Email: "+emailReceived)
 
+        
         navigation.setNavigationItemSelectedListener ({item ->
             when(item.itemId){
                 R.id.op1 -> {
@@ -39,10 +43,11 @@ class Home : AppCompatActivity() {
                 R.id.op3->{
                     Log.i("OP3","Cerrar Sesión")
 
-                    val intent = Intent(this,Tryinh::class.java)
+                    val user = FirebaseAuth.getInstance().signOut()
+                    val intent = Intent(this,LoginActivity::class.java)
                     startActivity(intent)
-            }
 
+                }
             }
             false
         })

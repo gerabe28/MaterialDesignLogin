@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".nav_headeer"></activity>
-        <activity android:name=".DrawerLayout" />
+        <activity android:name=".DrawerLayoutActivity" />
         <activity
-            android:name=".Home"
+            android:name=".HomeActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Registro" />
         <activity
-            android:name=".Tryinh"
+            android:name=".LoginActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"

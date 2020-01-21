@@ -3,7 +3,7 @@ package com.example.materialdesign
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class DrawerLayout : AppCompatActivity() {
+class DrawerLayoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context=".DrawerLayout">
+    tools:context=".DrawerLayoutActivity">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation"
