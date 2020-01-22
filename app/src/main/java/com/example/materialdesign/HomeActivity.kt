@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
+import android.widget.TextView
 import androidx.core.view.GravityCompat
-import com.google.firebase.auth.EmailAuthProvider
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_drawer_layout.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.nav_header.*
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -27,6 +29,15 @@ class HomeActivity : AppCompatActivity() {
         val emailReceived = intent.getStringExtra("correo")
 
         Log.d("tag","Email: "+emailReceived)
+
+
+        //Mostrar el correo loggeado
+        val navigationView: NavigationView = findViewById(R.id.navigation1)
+        val navHeader: View = navigationView.getHeaderView(0)
+        val txtWebsite: TextView = navHeader.findViewById(R.id.txtEmailHeader)
+
+        txtWebsite.setText(emailReceived);
+
 
 
         navigation1.setNavigationItemSelectedListener ({item ->

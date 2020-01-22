@@ -63,10 +63,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onBackPressed()
     {
-        super.onBackPressed()
-        val returnIntent = Intent(this, MainActivity::class.java)
-        startActivity(returnIntent)
+       // super.onBackPressed()
         finish()
-        System.exit(0)
     }
 }

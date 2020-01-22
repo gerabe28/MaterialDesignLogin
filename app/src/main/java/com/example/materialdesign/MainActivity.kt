@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("correo",email)
                     intent.putExtra("nombre",nombre)
                     startActivity(intent)
+                    finish()
                 }
 
             Log.d("tag","SESION ACTIVA")
