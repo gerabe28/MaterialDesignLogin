@@ -93,24 +93,26 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
+    <com.facebook.login.widget.LoginButton
+
+        android:id="@+id/login_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.212"
-        app:srcCompat="@drawable/ic_fbicon" />
+        app:layout_constraintTop_toBottomOf="@+id/signInBtn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
@@ -122,7 +124,7 @@
         android:id="@+id/imageButton3"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="72dp"
 
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -138,10 +140,10 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.161"></com.google.android.gms.common.SignInButton>
+        app:layout_constraintVertical_bias="0.209"></com.google.android.gms.common.SignInButton>
 
     <ImageView
         android:id="@+id/imageView"
