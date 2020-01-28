@@ -1,17 +1,19 @@
 package com.example.materialdesign
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+//<<<<<<< HEAD
 import android.view.View
 import android.widget.TextView
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
+//=======
+import androidx.appcompat.app.AppCompatActivity
+//>>>>>>> 7c269230b99dfd89530dc70ca3cb96efd1e04e7d
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.nav_header.*
 
 
 class HomeActivity : AppCompatActivity() {
@@ -23,14 +25,18 @@ class HomeActivity : AppCompatActivity() {
 
 
         //recepcion de objeto USER
+///<<<<<<< HEAD
        intent.extras.getString("correo")
        // intent.getShortExtra("correo","user")
+//=======
+//>>>>>>> 7c269230b99dfd89530dc70ca3cb96efd1e04e7d
         val intent = getIntent();
         val emailReceived = intent.getStringExtra("correo")
 
         Log.d("tag","Email: "+emailReceived)
 
 
+//<<<<<<< HEAD
         //Mostrar el correo loggeado
         val navigationView: NavigationView = findViewById(R.id.navigation1)
         val navHeader: View = navigationView.getHeaderView(0)
@@ -41,6 +47,9 @@ class HomeActivity : AppCompatActivity() {
 
 
         navigation1.setNavigationItemSelectedListener ({item ->
+//=======
+  //      navigation.setNavigationItemSelectedListener { item ->
+//>>>>>>> 7c269230b99dfd89530dc70ca3cb96efd1e04e7d
             when(item.itemId){
                 R.id.op1 -> {
                     Log.i("OP1","Opcion 1")
@@ -54,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
                     Log.i("OP3","Cerrar Sesión")
 
                     val user = FirebaseAuth.getInstance().signOut()
-                    val intent = Intent(this,LoginActivity::class.java)
+                    val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
 
                 }
@@ -86,6 +95,7 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+//<<<<<<< HEAD
 
     override fun onBackPressed()
     {
@@ -104,3 +114,4 @@ class HomeActivity : AppCompatActivity() {
 
 
 // https://www.youtube.com/watch?v=0-Xq2ti_HaE
+

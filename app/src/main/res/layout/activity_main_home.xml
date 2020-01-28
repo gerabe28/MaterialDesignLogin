@@ -6,11 +6,9 @@
     android:layout_width="match_parent"
     android:background="#FFFFFF"
     android:layout_height="match_parent"
-
-    tools:context=".HomeActivity"
-    >
+    tools:context=".MainHomeActivity">
     <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawerLayout"
+        android:id="@+id/drawerLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
@@ -19,29 +17,19 @@
         tools:openDrawer="start">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/toolbar2"
                 android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:theme="@style/ThemeOverlay.AppCompat"
                 ></androidx.appcompat.widget.Toolbar>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:ignore="MissingConstraints" >
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:ignore="MissingConstraints" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigation1"
+            android:id="@+id/navigation2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start|left"
@@ -50,9 +38,20 @@
             app:menu="@menu/menu" />
 
     </androidx.drawerlayout.widget.DrawerLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/action2"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACTION"></Button>
 
 
-
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
