@@ -3,17 +3,21 @@ package com.example.materialdesign
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_opcion1.*
+import android.util.Log
+import kotlinx.android.synthetic.main.activity_login.view.*
+import kotlinx.android.synthetic.main.activity_encuesta.*
 
-class Opcion1Activity : AppCompatActivity() {
+class EncuestaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_opcion1)
+        setContentView(R.layout.activity_encuesta)
 
         btnSendInf.setOnClickListener {
             val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
         }
+
+
     }
 }

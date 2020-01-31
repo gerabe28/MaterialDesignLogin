@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Opcion1Activity">
+    tools:context=".EncuestaActivity">
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#000"
         android:text="Encuesta"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:id="@+id/titleEncuesta">
     </com.google.android.material.textview.MaterialTextView>
@@ -22,7 +22,7 @@
         android:text="1. ¿I dont know what to ask here?"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:id="@+id/question2">
+        android:id="@+id/question1">
     </com.google.android.material.textview.MaterialTextView>
     <RadioGroup
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         android:text="2. ¿I also dont know what to ask here?"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:id="@+id/question1">
+        android:id="@+id/question2">
     </com.google.android.material.textview.MaterialTextView>
     <RadioGroup
         android:layout_width="wrap_content"
@@ -78,10 +78,78 @@
             android:id="@+id/third"
             android:text="Answer 3"/>
     </RadioGroup>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="3. ¿I also dont know what to ask here?"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/question3">
+    </com.google.android.material.textview.MaterialTextView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose"/>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"/>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cross"/>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="4. Will you?"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/question4">
+    </com.google.android.material.textview.MaterialTextView>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            app:useMaterialThemeColors="false"
+            android:id="@+id/opcone"
+            android:text="Opcion"/>
+    </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnSendInf"
         android:layout_gravity="center"
         android:text="Send"/>
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>

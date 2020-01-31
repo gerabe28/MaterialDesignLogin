@@ -53,7 +53,7 @@ class HomeActivity : AppCompatActivity() {
             when(item.itemId){
                 R.id.op1 -> {
                     Log.i("OP1","Opcion 1")
-                    val intent = Intent(this,Opcion1Activity::class.java)
+                    val intent = Intent(this,EncuestaActivity::class.java)
                     startActivity(intent)
                 }
                 R.id.op2 -> {
