@@ -13,6 +13,18 @@ class EncuestaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_encuesta)
 
+       opcone.setOnCheckedChangeListener{ button, check ->
+
+           if(check){
+               opctwo.isChecked = false
+
+           }else{
+               opctwo.isChecked=true
+           }
+       }
+
+
+
         btnSendInf.setOnClickListener {
             val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
