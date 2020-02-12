@@ -1,115 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="30dp"
-    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
    >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:id="@+id/boxRelative"
+                android:layout_width="350dp"
+                android:layout_height="169dp"
+                android:layout_marginTop="20dp"
+                android:minHeight="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageCard"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/img_backback"></de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/titleCiudad"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/descriptionCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleCiudad"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/imageCard"
+                    android:textAlignment="gravity" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/txtfalseView"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#50D7AC"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtfalseView2">
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
 
         <RelativeLayout
-            android:id="@+id/boxRelative"
-            android:layout_width="350dp"
-            android:layout_height="169dp"
-            android:layout_marginTop="20dp"
-            android:minHeight="200dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageCard"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/img_backback"></de.hdodenhof.circleimageview.CircleImageView>
+            android:id="@+id/boxRelative2"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_below="@+id/boxRelative"
+            android:layout_marginTop="180dp">
 
             <TextView
-                android:id="@+id/titleCiudad"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:gravity="center"
-                android:layout_marginTop="4dp" />
-
-            <TextView
-                android:id="@+id/descriptionCiudad"
+                android:id="@+id/textpago"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/titleCiudad"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="¿Seleccione método de pago?"
+                android:textColor="#000" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textpago"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_toEndOf="@+id/imageCard"
-                android:textAlignment="gravity" />
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="3dp"
+                android:checkedButton="@+id/first"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/opcTarjetaCredito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="CreditCard" />
+
+                <RadioButton
+                    android:id="@+id/opcEfectivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Efectivo" />
+
+                <RadioButton
+                    android:id="@+id/opcCheque"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Cheque" />
+            </RadioGroup>
+
 
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    <RelativeLayout
-        android:id="@+id/boxRelative2"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_below="@+id/boxRelative"
-        android:layout_marginTop="180dp">
-
-        <TextView
-            android:id="@+id/textpago"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="¿Seleccione método de pago?"
-            android:textColor="#000" />
-
-        <RadioGroup
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textpago"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="3dp"
-            android:checkedButton="@+id/first"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/opcTarjetaCredito"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="CreditCard" />
-
-            <RadioButton
-                android:id="@+id/opcEfectivo"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="Efectivo" />
-
-            <RadioButton
-                android:id="@+id/opcCheque"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="Cheque" />
-        </RadioGroup>
-
-
-    </RelativeLayout>
-
-</androidx.cardview.widget.CardView>
+            android:layout_gravity="bottom|right"
+            android:layout_margin="6dp"
+            android:focusable="false"
+            app:srcCompat="@drawable/ic_attach_money_black_24dp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

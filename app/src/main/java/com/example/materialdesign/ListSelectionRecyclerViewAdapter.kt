@@ -1,12 +1,16 @@
 package com.example.materialdesign
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHolder>): RecyclerView.Adapter<ListSelectionRecyclerViewAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,16 +28,31 @@ class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHold
            }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
+          @SuppressLint("WrongConstant")
           fun bindItems(data:ListSelectionViewHolder){
               val titleCiudad: TextView = itemView.findViewById(R.id.titleCiudad)
               val descriptionCiudad: TextView = itemView.findViewById(R.id.descriptionCiudad)
               val imageCiudad: ImageView = itemView.findViewById(R.id.imageCard)
+              val floating_action_button: FloatingActionButton = itemView.findViewById(R.id.floating_action_button)
+              val txtfalseView: CardView = itemView.findViewById(R.id.txtfalseView)
+              val txtfalseView2: TextView = itemView.findViewById(R.id.txtfalseView2)
 
               titleCiudad.text=data.nameCity
               descriptionCiudad.text=data.descripcion
               Glide.with(itemView.context).load(data.imageCiudad).into(imageCiudad)
+              txtfalseView2.text=data.txtfalseView2
 
-        }
+              floating_action_button.setOnClickListener {
+
+                  if (txtfalseView.visibility == View.INVISIBLE){
+                      txtfalseView.visibility = View.VISIBLE
+                  }else{
+                      txtfalseView.visibility = View.INVISIBLE
+                  }
+              }
+
+              }
+
+          }
     }
 
-}
