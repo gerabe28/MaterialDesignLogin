@@ -11,6 +11,7 @@ import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import org.w3c.dom.Text
 
 class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHolder>): RecyclerView.Adapter<ListSelectionRecyclerViewAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,6 +26,7 @@ class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHold
 
     override fun onBindViewHolder(holder: ListSelectionRecyclerViewAdapter.ViewHolder, position: Int) {
        holder.bindItems(list[position])
+        // holder.enviarTitulo()
            }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -36,11 +38,15 @@ class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHold
               val floating_action_button: FloatingActionButton = itemView.findViewById(R.id.floating_action_button)
               val txtfalseView: CardView = itemView.findViewById(R.id.txtfalseView)
               val txtfalseView2: TextView = itemView.findViewById(R.id.txtfalseView2)
+              val txtBool : TextView = itemView.findViewById(R.id.txtBool)
+              val txtPrice: TextView = itemView.findViewById(R.id.txtPrice)
 
               titleCiudad.text=data.nameCity
               descriptionCiudad.text=data.descripcion
               Glide.with(itemView.context).load(data.imageCiudad).into(imageCiudad)
               txtfalseView2.text=data.txtfalseView2
+              txtBool.text=data.valorBool.toString()
+              txtPrice.text=data.Price.toString()
 
               floating_action_button.setOnClickListener {
 
@@ -52,6 +58,11 @@ class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHold
               }
 
               }
+      /*  fun enviarTitulo(data:Tittle){
+            val titleTitle: TextView = itemView.findViewById(R.id.txtTitle)
+
+            titleTitle.text=data.titleCiudad
+        }*/
 
           }
     }

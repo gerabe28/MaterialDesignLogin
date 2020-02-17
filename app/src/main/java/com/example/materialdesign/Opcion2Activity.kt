@@ -26,17 +26,14 @@ val img2: String = "https://www.nationalgeographic.com.es/medio/2020/01/28/danum
         recyclerView.layoutManager = LinearLayoutManager(this,LinearLayout.VERTICAL,false)
         val albums = ArrayList<ListSelectionViewHolder>()
 
+        //ArrayList<Tittle>().add(Tittle("CIUDADES"))
 
-        albums.add(ListSelectionViewHolder( img1,"Cusco","Cuzco es una ciudad de los Andes peruanos que fue la capital del Imperio Inca y es conocida por sus restos arqueológicos y la arquitectura colonial española.","Ida y vuelta: $140"))
-        albums.add(ListSelectionViewHolder(img2,"Iquitos","Conocida también como Ciudad de Iquitos, es la ciudad capital de la provincia de Maynas y el departamento de Loreto.","Ida y vuelta: $210"+"vuelto directo: 150"))
-
+        albums.add(ListSelectionViewHolder( img1,"Cusco","Cuzco es una ciudad de los Andes peruanos que fue la capital del Imperio Inca y es conocida por sus restos arqueológicos y la arquitectura colonial española.","2012-02-02 \n ta carito",false,240))
+        albums.add(ListSelectionViewHolder(img2,"Iquitos","Conocida también como Ciudad de Iquitos, es la ciudad capital de la provincia de Maynas y el departamento de Loreto.","2005-12-14 \n\n compra casero",true,290))
 
         val adapter = ListSelectionRecyclerViewAdapter(albums)
 
         recyclerView.adapter = adapter
-
-
-
     }
 
 }
