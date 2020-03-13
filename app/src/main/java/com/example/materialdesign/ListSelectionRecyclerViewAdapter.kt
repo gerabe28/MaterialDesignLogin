@@ -45,8 +45,8 @@ class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHold
               descriptionCiudad.text=data.descripcion
               Glide.with(itemView.context).load(data.imageCiudad).into(imageCiudad)
               txtfalseView2.text=data.txtfalseView2
-              txtBool.text=data.valorBool.toString()
-              txtPrice.text=data.Price.toString()
+              txtBool.text=data.valorBool
+              txtPrice.text=data.Price
 
               floating_action_button.setOnClickListener {
 
@@ -56,9 +56,8 @@ class ListSelectionRecyclerViewAdapter(var list: ArrayList<ListSelectionViewHold
                       txtfalseView.visibility = View.INVISIBLE
                   }
               }
-
               }
-      /*  fun enviarTitulo(data:Tittle){
+        /*fun enviarTitulo(data:Tittle){
             val titleTitle: TextView = itemView.findViewById(R.id.txtTitle)
 
             titleTitle.text=data.titleCiudad
